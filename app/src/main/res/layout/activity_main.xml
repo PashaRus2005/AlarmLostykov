@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="403dp"
+        android:layout_height="337dp"
+        android:timePickerMode="clock"
+        app:layout_constraintBottom_toTopOf="@+id/weekdayLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/weekdayLayout"
+        android:layout_width="328dp"
+        android:layout_height="314dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker">
+
+        <CheckBox
+            android:id="@+id/checkboxMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Понедельник" />
+
+        <CheckBox
+            android:id="@+id/checkboxTuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вторник" />
+
+        <CheckBox
+            android:id="@+id/checkboxWednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Среда" />
+
+        <CheckBox
+            android:id="@+id/checkboxFriday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пятница" />
+
+        <CheckBox
+            android:id="@+id/checkboxThursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Четверг" />
+
+        <CheckBox
+            android:id="@+id/checkboxSaturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Суббота" />
+
+        <CheckBox
+            android:id="@+id/checkboxSunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Воскресенье" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weekdayLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
